@@ -1,0 +1,72 @@
+<!-- Contact Form with Netlify Forms -->
+<section class="content-section" id="contact">
+    <div class="container px-4 px-lg-5">
+        <div class="content-section-heading text-center">
+            <h3 class="text-secondary mb-0">Kontakt</h3>
+            <h2 class="mb-5">Du bist interessiert oder hast Fragen?</h2>
+        </div>
+        
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8">
+                <!-- Netlify Form -->
+                <form name="kontakt" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/success.html">
+                    <!-- Honeypot for spam protection -->
+                    <p class="d-none">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
+                    
+                    <!-- Hidden form-name field -->
+                    <input type="hidden" name="form-name" value="kontakt" />
+                    
+                    <!-- Name -->
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Dein Name *</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Deine E-Mail *</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    
+                    <!-- Phone -->
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Deine Telefonnummer</label>
+                        <input type="tel" class="form-control" id="phone" name="phone">
+                    </div>
+                    
+                    <!-- Subject -->
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Wobei kann ich dir helfen? *</label>
+                        <select class="form-select" id="subject" name="subject" required>
+                            <option value="">Bitte wählen...</option>
+                            <option value="Mathe (1-4 Klasse)">Mathe (1-4 Klasse)</option>
+                            <option value="Mathe (5-7 Klasse)">Mathe (5-7 Klasse)</option>
+                            <option value="Englisch">Englisch</option>
+                            <option value="Sonstiges">Sonstiges</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Preferred Date/Time -->
+                    <div class="mb-3">
+                        <label for="preferred-time" class="form-label">Wann hättest du Zeit?</label>
+                        <input type="text" class="form-control" id="preferred-time" name="preferred-time" placeholder="z.B. Dienstag 15:00 Uhr oder Donnerstag Nachmittag">
+                    </div>
+                    
+                    <!-- Message -->
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Deine Nachricht</label>
+                        <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-xl">Nachricht senden</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
